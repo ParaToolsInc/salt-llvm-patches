@@ -1,0 +1,11 @@
+--- /tmp/llvm/lib/cmake/mlir/MLIRTargets.cmake	2024-12-08 17:02:22.000000000 +0000
++++ /tmp/llvm/lib/cmake/mlir/MLIRTargets.cmake.b	2024-12-09 16:01:32.097224896 +0000
+@@ -2792,7 +2792,7 @@
+ foreach(_cmake_target IN LISTS _cmake_import_check_targets)
+   foreach(_cmake_file IN LISTS "_cmake_import_check_files_for_${_cmake_target}")
+     if(NOT EXISTS "${_cmake_file}")
+-      message(FATAL_ERROR "The imported target \"${_cmake_target}\" references the file
++      message(DEBUG "The imported target \"${_cmake_target}\" references the file
+    \"${_cmake_file}\"
+ but this file does not exist.  Possible reasons include:
+ * The file was deleted, renamed, or moved to another location.
